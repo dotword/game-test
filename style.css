@@ -71,6 +71,10 @@ section.right-color {
 }
 .right-wrong {
   display: flex;
+  position: relative;
+}
+.right-wrong > div {
+  position: absolute;
 }
 .hidden {
   display: none;
@@ -91,14 +95,15 @@ section.colors-options {
   width: 90%;
   align-self: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   max-width: 80rem;
   margin: 2rem auto;
 }
 .square {
-  width: 30%;
-  padding-top: 30%;
+  width: 70%;
+  padding-top: 70%;
   cursor: pointer;
   letter-spacing: 0.05rem;
   position: relative;
@@ -247,4 +252,8 @@ section.colors-options {
       flex-direction: column;
       justify-content: space-evenly;
     }
+    .square {
+      width: 30%;
+      padding-top: 30%;
   }
+}

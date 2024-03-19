@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivina el color</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Adivina el color</h1>
+    </header>
+    <main class="main-container">
+      <section class="right-color">
+        <div class="instructions">
+          <h2>Elige la caja que representa este color:</h2>
+          <!-- Color que se debe seleccionar -->
+          <p class="color-rgb"><span id="winner-color"></span></p>
+        </div>
+        <div class="buttoms-choosecolor">
+          <!-- Marcadores -->
+          <div class="scores">
+            <div class="winner-score">
+              Aciertos: <span id="winner-score">0</span>
+            </div>
+            <div class="looser-score">
+              Fallos: <span id="looser-score">0</span>
+            </div>
+          </div>
+
+          <!-- Aviso de acierto o fallo -->
+          <div class="right-wrong">
+            <div id="correct" class="hidden">¡Acierto!</div>
+            <div id="wrong" class="hidden">¡Error!</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="colors-options">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </section>
+    </main>
+
+    <!-- POPUP -->
+    <div class="popup-main">
+      <div class="popup-inner">
+        <div class="popup-wrap">
+          <div class="notice-popup hidden" id="you-win">
+            ¡Ganaste la partida!
+          </div>
+          <div class="notice-popup hidden" id="you-loose">¡Perdiste la partida!</div>
+
+          <button type="submit" id="play-again">Jugar de nuevo</button>
+        </div>
+      </div>
+      <div class="bg-overlay"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
